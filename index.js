@@ -33,4 +33,8 @@ function unleashDog(dogName, dogBreed){
     return a;
 };
 
-let routine = [wakeDog(dogName, dogBreed), leashDog(dogName, dogBreed), walkToPark(dogName, dogBreed)]
+let routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog]
+
+function exerciseDog(dogName, dogBreed){
+    return routine.map(fn => fn(dogName, dogBreed))
+}
